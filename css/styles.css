@@ -133,14 +133,13 @@ button {
 */
 
 .header {
-    padding-top: 24px;
-
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 @media screen and (max-width: 767px) {
     .header {
+        padding-top: 24px;
         padding-bottom: 24px;
     }
 }
@@ -384,7 +383,12 @@ button {
     color: var(--accent-color);
 
 }
-
+@media screen and (max-width: 427px) {
+    .mobile-adress-link-phone {
+        font-size: 24px;
+    }
+    
+}
 .mobile-adress-link-mail {
     font-weight: 500;
     font-size: 20px;
@@ -426,6 +430,11 @@ button {
     .header-list {
         margin-left: 120px;
     }
+    .contacts {
+        display: flex;
+        margin-left: auto;
+        font-style: normal;
+    }
 }
 
 /* Десктоп */
@@ -439,14 +448,9 @@ button {
         gap: 40px;
 
         margin-left: auto;
-        font-style: normal;
     }
 
-    .contacts {
-        display: flex;
-        margin-left: auto;
-        font-style: normal;
-    }
+
 }
 
 /**
@@ -712,6 +716,11 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
     flex-direction: column;
     align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .team-container {
+        width: 584px;
+    }
+}
 
 .section-team {
     padding: 96px 0;
@@ -824,10 +833,19 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 }
 
 /* Клієнти */
-.customers {
-    padding: 96px 0;
-}
+@media screen and (max-width: 1157px) {
+    .customers-container {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
 
+    
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+.customers-container {
+    width: 584px;
+}
+}
 .customers-title {
     margin-bottom: 72px;
 
@@ -932,10 +950,22 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 
     margin-bottom: 16px;
 }
-
+@media screen and (min-width: 1158px) {
+    .footer-logo-text {
+        margin-right: 120px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .footer-logo-text {
+        margin-bottom: 72px;
+    }
+    .footer-social {
+        margin-bottom: 72px;
+    }
+}
 .footer-text {
     width: 268px;
-    padding-bottom: 72px;
+
     letter-spacing: 0.02em;
     color: var(--additional-text-color);
 }
@@ -943,19 +973,12 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 .footer-social-list {
     display: flex;
     gap: 16px;
-
-    margin-bottom: 72px;
 }
 
 .footer-social-list-icon {
     fill: var(--primary-fill-color);
 
     align-items: center;
-}
-
-.footer-social {
-    margin: 0 auto;
-    padding-bottom: 16px;
 }
 
 .footer-social-list-link {
@@ -998,7 +1021,11 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
     flex-direction: column;
     align-items: center;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer-container {
+        width: 584px;
+    }
+}
 .footer-subscribe {
     display: flex;
     flex-direction: column;
@@ -1105,11 +1132,9 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 
 @media screen and (min-width: 768px) {
     .footer-container {
-        padding-left: 108px;
-
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: baseline;
         gap: 72px 16px;
     }
 
@@ -1123,7 +1148,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
     }
 
     .footer-text {
-        width: 264px;
         padding: 0;
     }
 
@@ -1442,7 +1466,12 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
         overflow-y: scroll
     }
 }
-
+@media screen and (max-width: 427px) {
+    .modal {
+        width: calc(100% - 32px);
+        height: auto;
+    }
+}
 @media screen and (min-width: 767px) {
     .modal {
         width: 408px;
@@ -1652,7 +1681,9 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 
     transition: color var(--transition-dur-timing-func);
 }
-
+.chekbox-text {
+    display: inline;
+}
 .privacy-policy:hover,
 .privacy-policy:focus {
     color: var(--accent-text-color);
