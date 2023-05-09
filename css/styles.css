@@ -467,10 +467,6 @@ button {
     max-width: 428px;
     height: 432px;
 
-    display: flex;
-
-    text-align: center;
-
     background-color: var(--secondary-bg-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/dark-bg-mobil.jpg);
 
