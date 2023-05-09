@@ -830,7 +830,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1158px) {
 
 /* Клієнти */
 @media screen and (max-width: 1157px) {
-    .customers-container {
+    .customers {
         padding-top: 96px;
         padding-bottom: 96px;
     }
