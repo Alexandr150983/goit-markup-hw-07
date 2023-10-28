@@ -3,12 +3,19 @@
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
+    body: document.querySelector('body'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn.addEventListener('click', openModal);
+  refs.closeModalBtn.addEventListener('click', closeModal);
 
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
+  function openModal() {
+    refs.modal.classList.remove('is-hidden');
+    refs.body.style.overflow = 'hidden'; // Забороняємо скролінг фону
+  }
+
+  function closeModal() {
+    refs.modal.classList.add('is-hidden');
+    refs.body.style.overflow = 'auto'; // Дозволяємо скролінг фону
   }
 })();
