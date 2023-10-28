@@ -11,11 +11,11 @@
 
   function openModal() {
     refs.modal.classList.remove('is-hidden');
-    refs.body.style.overflow = 'hidden'; // Забороняємо скролінг фону
+    refs.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     refs.modal.classList.add('is-hidden');
-    refs.body.style.overflow = 'auto'; // Дозволяємо скролінг фону
+    refs.body.style.overflow = 'auto';
   }
 })();
